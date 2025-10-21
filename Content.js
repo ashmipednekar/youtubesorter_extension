@@ -1,11 +1,11 @@
+const currentUrl = window.location.href;
+//const urlParts = currentUrl.split('/');
+// index 3 contains the channel @
+
+const channelHandle = currentUrl.split('/')[3];
+
 async function main() {
-    const currentUrl = window.location.href;
-    //const urlParts = currentUrl.split('/');
-    // index 3 contains the channel @
-
-    const channelId = currentUrl.split('/')[3];
     const channelData = getChannelData();
-
 }
 
 // makes a request to YouTube's API to fetch channel details given a channel ID
@@ -22,6 +22,6 @@ async function getChannelData() {
 
     console.log(data);
     return data;
-}
+} 
 
 main();
