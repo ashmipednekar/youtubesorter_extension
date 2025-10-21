@@ -4,15 +4,24 @@
     "version": "1.0.0",
     
     "description": "A YouTube extension with additional video sorting options on channel videos",
+    "permissions": ["tabs"],
+    
     "icons": {
     "48": "images/icon-48.png",
-    "128": "images/icon-128.png"
+    "128": "images/icon-48.png"
+    },
+
+    "action": {
+        "default_popup": "main.html",
+        "default_icon": "images/icon-48.png"
     },
 
     "content_scripts": [
         {
-            "matches": ["https://www.youtube.com/@*/videos"],
+            "matches": ["https://*.youtube.com/@*/videos"],
             "js": ["Content.js"]
         }
     ]
+
+    
 }
