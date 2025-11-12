@@ -17,7 +17,7 @@
 
     "content_scripts": [
         {
-            "matches": ["https://*.youtube.com/@*/videos"],
+            "matches": ["https://*.youtube.com/*"],
             "js": ["config.js", "Content.js"]
         }
     ]
